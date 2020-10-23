@@ -1,1 +1,34 @@
 /* Put your style information here! */
+body {
+    background-color: lightgray;
+}
+
+h1 {
+	font-size: 42px;
+	font-family: Times New Roman;
+    display: flex;
+}
+
+h2 {
+    font-family: Times New Roman;
+    display: flex;
+}
+
+h3 {
+    font-family: Times New Roman;
+    display: flex;
+}
+
+.intro {
+    font-size: 20px;
+}
+
+.part {
+    color: black;
+    font-size: 16px;
+    padding: 15px;
+}
+
+.part:hover {
+	border: 1px solid #777;
+  }

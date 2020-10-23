@@ -2,13 +2,93 @@
 
 <html>
   <head>
-    <title>INSERT TITLE HERE!</title>
+    <title> Redesign </title>
     <link rel="stylesheet" href="index.css">
     <!-- TODO: add additional links here! e.g. fonts, icons, more stylesheets, etc. -->
+    <h1> Responsive Redesign </h1>
     <meta content="width=device-width, initial-scale=1" name="viewport" />
   </head>
 
   <body>
-    <!-- TODO: put your HTML code here! -->
+    <div class="intro">
+      Have you ever used <a href="https://www.starbucks.co.jp"> Japanese Starbucks website </a>? Was it easy for use to read and understand the website? Did you found what you wanted? <br>
+      As you can see, not all websites have good interfaces. <br>
+      Therefore, here I am to redesign one of the existing websites to fix its interface flaws!!
+    </div>
+
+    <!--part 1-->
+    <div class="part">
+      <h2> Part 1: Identifying Usability Problems </h2>
+      <h3> Picking a Website </h3>
+      I chose to redesign the home page of <a href="https://www.table570.com/"> Table570</a>, one of the local restaurant from my high school:<br>
+      <img src="img/homepage.png" width="100%" height="100%">
+
+      <h3> Finding Problems </h3>
+      The website had some interface flaws that could confuse the users:
+      <ol>
+        <li> In the navigation bar, there are buttons with similar or overlapping functionalities, such as delivery and order online.</li>
+        <li> Order pickup and order delivery buttons below the navigation bar also does not seem necessary given the similar options in the navigation bar. </li>
+        <li> Hours of operation part is unclear; so is the hours on the website temporary or set? </li>
+        <li> Why is hours of operation separate from contact and location part? Don't people look for them all at the once? </li>
+        <li> In the same part, dash is difficult to see. It almost touches the 'M' </li>
+        <li> There is a space missing between ‘Sun-Thurs’ and ‘|’ in the hours or operation part. </li>
+        <li> In the footer, contact and location part is not aligned correctly. </li>
+        <li> In the contact part, dots are difficult to see in the phone numbers. </li>
+        <li> Instagram link only shows up in mobile devices but it also shows email and phone call shortcut icons along with the link, which seems unnecessary given the contact information already in the website.
+        </li>
+      </ol>
+
+      <h3> Accessibility </h3>
+      The screen reader reads the website in F-shaped visual flow; first reads the navigation bar left to right, then reads order pick up and order delivery, and so on. The website does not have any accessibility concerns. However, it has 16 contrast errors due to low contrast between text and background colors and 7 alerts due to pdf links, underlined or alternative texts, missing heading, email plugins, and links to ordering/delivery websites.
+    </div>
+
+    <!--part 2-->
+    <div class="part">
+      <h2> Part 2: Visual Redesign </h2>
+      <h3> Low Fidelity Wireframing </h3>
+      <img src="img/lofi_phone.png" style="width: 40%;">
+      <img src="img/lofi_pad.png" style="width: 45%;">
+      <img src="img/lofi_desktop.png" style="width: 45%;">
+
+      <h3> High Fidelity Prototyping </h3>
+      <img src="img/hifi_phone.png" style="width: 30%;"> <br>
+      Annotations: <br>
+      <ol>
+        <li> Since width of mobiles is significantly smaller than that of pads and desktops, I made a menu button(not functional) holding information in the navigation bar instead of original navigation bar.</li>
+        <li> For the main image below the navigation bar, I used CSS flexbox, width, and height functionalities to help it fit to difference device sizes. </li>
+        <li> For the hiring tab, I used CSS flexbox, width, and text-align functionalities to set the text to center. </li>
+        <li> I moved hours part to the footer because these information are similar; people look for these information don't look for these information separately but at the same time. </li>
+      </ol>
+
+      <img src="img/hifi_pad.png" style="width: 40%;"> <br>
+      Annotations: <br>
+      <ol>
+        <li> Social media buttons only showed up when opened from mobile. So in order to prevent this, I added it to the contact information because social media is a part of contact information. </li>
+        <li> In order to prevent not using empty space, I used flexbox to keep track of the 4 information in the footer. Since the pad width is greater than mobile width, there is now more width space for locations and hours parts. </li>
+        <li> Since width is greater than mobile, full navigation bar is used instead of menu button. </li>
+      </ol>
+
+      <img src="img/hifi_desktop.png" style="width: 40%;"> <br>
+      Annotations: <br>
+      <ol>
+        <li> Similarly from pad, using flexboxes helps move hours part if there is more width space. </li>
+        <li> If the website is fully functional, then clicking navigation bar, buttons, social media logos, application text, and email will work as it should be. </li>
+      </ol>
+
+      <h3> Visual Design Style Guide </h3>
+        <img src="img/style_guide.png" style="width: 40%;">
+    </div>
+
+    <!--part 3-->
+    <div class="part">
+      <h2> Part 3: Responsive Redesign </h2>
+      Here is my <a href="https://shielded-brushlands-70691.herokuapp.com/">redesigned website link </a>
+      <h3> Observations </h3>
+      <ol>
+        <li> For most of the containers and images, I used percentage instead of pixels to set sizes because setting it to pixels does not make the website responsive</li>
+        <li> As width decreases, hours part moves below the locations and then they move below the contacts.  </li>
+      </ol>
+
+    </div>
   </body>
 </html>
